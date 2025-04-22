@@ -1,0 +1,61 @@
+.range-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 37px;
+    background: transparent;
+    z-index: 2;
+    appearance: none;
+    pointer-events: auto;
+  }
+  
+  /* Remove default track */
+  .range-overlay::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 30px;
+  }
+  
+  .range-overlay::-moz-range-track {
+    background: transparent;
+    height: 30px;
+  }
+  
+  .range-overlay::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #0d6efd; /* Blue fill */
+    border: 3px solid #fff; /* White border */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    margin-top: -6px; /* Align vertically */
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+    transition: transform 0.2s ease;
+  }
+  
+  .range-overlay::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+  
+  .range-overlay::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #0d6efd;
+    border: 3px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .range-overlay::-moz-range-thumb:hover {
+    transform: scale(1.2);
+  }
+  
+  .range-overlay {
+    transition: all 0.2s ease-in-out;
+  }
+  
